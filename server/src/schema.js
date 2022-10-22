@@ -10,7 +10,7 @@ const typeDefs = gql`
   }
   type Car {
     id: String!
-    year: String
+    year: Int
     make: String
     model: String
     price: Float
