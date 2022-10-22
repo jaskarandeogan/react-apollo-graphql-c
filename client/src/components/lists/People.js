@@ -18,12 +18,13 @@ const People = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : (</p>;
-  console.log("data", data.people);
+  // console.log("data", data.people);
 
   return (
     <List style={styles.list}>
       {data.people.map((person) => (
         <List.Item key={person.id}>
+          {console.log("person", person)}
           <PeopleCard person={person} />
         </List.Item>
       ))}

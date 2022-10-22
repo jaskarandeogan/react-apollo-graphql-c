@@ -63,7 +63,7 @@ const resolvers = {
     // add person
     addPerson(parent, args, context, info) {
       const newPerson = {
-        id: people.length + 1,
+        id: args.id,
         firstName: args.firstName,
         lastName: args.lastName,
       };
