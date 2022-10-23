@@ -24,7 +24,7 @@ const People = () => {
     <List style={styles.list}>
       {data.people.map((person) => (
         <List.Item key={person.id}>
-          {console.log("person", person)}
+          {/* {console.log("person", person)} */}
           <PeopleCard person={person} />
         </List.Item>
       ))}

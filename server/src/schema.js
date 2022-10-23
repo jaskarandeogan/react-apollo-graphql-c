@@ -93,7 +93,7 @@ const resolvers = {
     //Add car
     addCar(parent, args, context, info) {
       const newCar = {
-        id: cars.length + 1,
+        id: args.id,
         year: args.year,
         make: args.make,
         model: args.model,
