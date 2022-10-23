@@ -7,6 +7,7 @@ import PeopleCard from '../listItenms/PeopleCard'
 const getStyles = () => ({
   list: {
     display: "flex",
+    alignItems: "center",
     justifyContent: "center",
   },
 });

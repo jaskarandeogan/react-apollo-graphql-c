@@ -3,6 +3,7 @@ const getStyles = () => ({
         fontSize: 24,
         padding: "15px",
         marginBottom: "15px",
+        textAlign: "center",
     }
 })
 

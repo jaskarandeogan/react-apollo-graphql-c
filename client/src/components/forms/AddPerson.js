@@ -42,7 +42,7 @@ function AddPerson() {
       form={form}
       name="addPerson"
       size="large"
-      style={{ margin: "0 auto" }}
+      style={{ alignItems: "center", justifyContent: "center", borderBottom: "1px solid #e8e8e8", paddingBottom: "40px" }}
       layout="inline"
       onFinish={onFinish}
     >

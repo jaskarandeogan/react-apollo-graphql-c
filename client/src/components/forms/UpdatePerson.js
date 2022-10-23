@@ -36,6 +36,7 @@ const UpdatePerson = (props) => {
       size="large"
       layout="inline"
       onFinish={onFinish}
+      style={{ alignItems: "center", justifyContent: "center", }}
       initialValues={{
         firstName: firstName,
         lastName: lastName,
@@ -44,18 +45,20 @@ const UpdatePerson = (props) => {
       <Form.Item
         label="First Name:"
         name="firstName"
+        style={{ margin: "20px" }}
         rules={[{ required: true, message: "please input your first name" }]}
       >
         <Input placeholder="i.e Leonardo" />
       </Form.Item>
       <Form.Item
+        style={{ margin: "20px" }}
         label="Last Name"
         name="lastName"
         rules={[{ required: true, message: "please input your first name" }]}
       >
         <Input placeholder="i.e Da Vinci" />
       </Form.Item>
-      <Form.Item shouldUpdate={true}>
+      <Form.Item shouldUpdate={true} style={{ margin: "20px" }}>
         {() => (
           <Button
             type="primary"

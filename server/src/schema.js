@@ -17,10 +17,18 @@ const typeDefs = gql`
     personId: String
   }
 
+  type PeopleWithCars {
+    id: String!
+    firstName: String
+    lastName: String
+    cars: [Car]
+  }
+
   type Query {
     people: [Person]
     person(id: String!): Person
     cars: [Car]
+    carsByPersonId(personId: String!): [Car]
     car(id: String!): Car
   }
 
@@ -58,6 +66,9 @@ const resolvers = {
     car(parent, args, context, info) {
       return find(cars, { id: args.id });
     },
+   carsByPersonId: (parent, args, context, info) => {
+      return filter(cars, { personId: args.personId });
+    }
   },
   Mutation: {
     // add person

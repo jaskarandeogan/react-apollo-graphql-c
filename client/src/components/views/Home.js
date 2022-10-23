@@ -30,7 +30,6 @@ function Home() {
       <AddPerson />
       <People />
       <Title title={"Cars"} />
-
       <RenderCars />
     </div>
   );

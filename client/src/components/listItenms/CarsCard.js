@@ -7,15 +7,17 @@ import UpdateCar from "../forms/UpdateCar";
 const getStyles = () => ({
   card: {
     width: 400,
+    margin: "auto",
+    justifyContent: "center",
   },
 });
 
 const CarsCard = (props) => {
   const styles = getStyles();
-  const { car } = props;
+  // const { car } = props;
 
   //people props
-  const [people, setPeople] = React.useState(props.people);
+  const [people] = React.useState(props.people);
   //car props
   const [id] = React.useState(props.car.id);
   const [year, setYear] = React.useState(props.car.year);
@@ -24,7 +26,6 @@ const CarsCard = (props) => {
   const [price, setPrice] = React.useState(props.car.price);
   const [personId, setPersonId] = React.useState(props.car.personId);
   const [update, setUpdate] = React.useState(false);
-  const [cardType, setCardType] = React.useState(props.cardType || null);
 
   const handleButtonClick = () => setUpdate(!update);
 
@@ -83,7 +84,6 @@ const CarsCard = (props) => {
         />
       ) : (
         <Card
-          type={cardType}
           actions={[
             <EditOutlined key="edit" onClick={handleButtonClick} />,
             <RemoveCar id={id} />,

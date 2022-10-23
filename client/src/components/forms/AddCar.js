@@ -7,7 +7,7 @@ import { GET_CARS, ADD_CAR } from "../../queries";
 const AddCar = (props) => {
   const [form] = Form.useForm();
   const { people } = props;
-  console.log("AddCar people", people);
+  // console.log("AddCar people", people);
   const [, forceUpdate] = React.useState(); // To disable submit button at the beginning.
 
   const [addCar] = useMutation(ADD_CAR);
@@ -47,7 +47,7 @@ const AddCar = (props) => {
       name="addCar"
       onFinish={onFinish}
       layout="inline"
-      style={{ marginBottom: "20px" }}
+      style={{ marginBottom: "20px" , justifyContent: "center", borderBottom: "1px solid #e8e8e8", paddingBottom: "40px"}}
     >
       <Form.Item
         name="make"

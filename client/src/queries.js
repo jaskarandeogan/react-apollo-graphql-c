@@ -94,4 +94,20 @@ export const DELETE_CAR = gql`
     }
 `;
 
+export const GET_PERSON_CARS = gql`
+query ($id: String!) {
+    person(id: $id) {
+        id
+        firstName
+        lastName
+    }
+    carsByPersonId(personId: $id) {
+        id
+        year
+        make
+        model
+        price
+    }
+  }
+`
 

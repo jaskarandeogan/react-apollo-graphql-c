@@ -4,9 +4,13 @@ import { EditOutlined } from "@ant-design/icons";
 import RemovePerson from "../buttons/RemovePerson";
 import UpdatePerson from "../forms/UpdatePerson";
 
+import { Link } from "react-router-dom";
+import ShowMore from "../views/ShowMore";
+
 const getStyles = () => ({
   card: {
-    width: 300,
+    width: 400,
+    justifyContent: "center",
   },
 });
 
@@ -33,6 +37,12 @@ const PeopleCard = ({ person }) => {
           <Card
             style={styles.card}
             actions={[
+              <Link
+                to={{ pathname: `/card/${id}` }}
+                element={<ShowMore  />}
+              >
+                Learn More
+              </Link>,
               <EditOutlined key="edit" onClick={handleButtonClick} />,
               <RemovePerson id={id} />,
             ]}
